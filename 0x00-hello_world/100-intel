@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Set the name of the input C file
+CFILE="example.c"
+
+# Set the name of the output assembly file
+ASSEMBLY_FILE="${CFILE%.*}.s"
+
+# Generate the assembly code using gcc
+gcc -S -masm=intel "$CFILE" -o "$ASSEMBLY_FILE"
