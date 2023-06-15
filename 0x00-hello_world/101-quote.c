@@ -1,14 +1,7 @@
-#include <stdio.h>
+#include <unistd.h>
 
-/**
- * main - Entry point of the program
- *
- * Return: Always returns 1
- */
 int main(void)
 {
-    /* Print message to standard error */
-    fprintf(stderr, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n");
-
+    write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
     return 1;
 }
