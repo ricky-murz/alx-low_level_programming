@@ -1,3 +1,2 @@
 #!/bin/bash
-echo '#include <stdio.h>
-int main(void) { puts("Programming is like building a multilingual puzzle"); return 0; }' | gcc -xc - && ./a.out
+echo '#include <stdio.h>' | cat - $0 | gcc -xc - && ./a.out
