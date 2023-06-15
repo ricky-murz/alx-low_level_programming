@@ -1,5 +1,5 @@
 /*
- * File: main.c
+ * File: 4-puts.c
  * Author: Eric Murimi
  * Date: June 15, 2023
  * Description: A program that prints the string "Programming is like building a multilingual puzzle" using the puts function.
@@ -15,5 +15,6 @@
 int main(void)
 {
 	puts("Programming is like building a multilingual puzzle");
+
 	return (0);
 }
