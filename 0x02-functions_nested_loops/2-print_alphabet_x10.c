@@ -1,34 +1,17 @@
-#include "main.h"
-
 /**
- * print_alphabet_10x - Prints the lowercase alphabet 10 times.
+ * print_alphabet - Prints the lowercase alphabet 10 times, followed by a new line.
  *
  * Return: void
  */
-void print_alphabet_10x(void)
+void print_alphabet(void)
 {
-	char letter;
-	int i;
+    char c;
+    int i;
 
-	for (i = 0; i < 10; i++)
-	{
-		for (letter = 'a'; letter <= 'z'; letter++)
-		{
-			_putchar(letter);
-		}
-	}
-	_putchar('\n');
+    for (i = 0; i < 10; i++) {
+        for (c = 'a'; c <= 'z'; c++) {
+            putchar(c);
+        }
+        putchar('\n');
+    }
 }
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-	print_alphabet_10x();
-
-	return (0);
-}
-
