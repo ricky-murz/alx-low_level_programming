@@ -1,18 +1,26 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-* main - tests function that prints if integer is positive or negative
+* main - prevents an infinite loop
 * Return: 0
 */
 
 int main(void)
 {
-        int i;
+    int i;
 
-        i = 98;
-	// Commented out the code causing the infinite loop
-        // positive_or_negative(i);
-        positive_or_negative(i);
+    printf("Infinite loop incoming :(\n");
 
-        return (0);
+    i = 0;
+
+    while (i < 10)
+    {
+        putchar(i + '0'); // Adding '0' to convert integer to character
+        i++; // Incrementing the loop variable
+    }
+
+    printf("Infinite loop avoided! \\o/\n");
+
+    return (0);
 }
+
