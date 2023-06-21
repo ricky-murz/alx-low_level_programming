@@ -1,17 +1,18 @@
 /**
- * _isalpha - checks whether a character is alphabetic
- * @c: the character to be checked
+ * _isalpha - checks whether a character is an alphabetic letter.
+ * @c: The character to be checked.
  *
- * Return: 1 if c is a letter, lowercase or uppercase, 0 otherwise
+ * Return: 1 if @c is a letter, lowercase or uppercase, 0 otherwise.
  */
 int _isalpha(char c)
 {
-        if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-        {
-                return (1);
-        }
-        else
-        {
-                return (0);
-        }
-}}
+    if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
