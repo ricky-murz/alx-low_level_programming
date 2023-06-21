@@ -1,10 +1,12 @@
 #include <stdio.h>
 
 /**
-* main - prevents an infinite loop
-* Return: 0
-*/
-
+ * main - Entry point
+ *
+ * Description: Prints numbers 0 to 9 and avoids infinite loop
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
     int i;
@@ -15,8 +17,8 @@ int main(void)
 
     while (i < 10)
     {
-        putchar(i + '0'); // Adding '0' to convert integer to character
-        i++; // Incrementing the loop variable
+        putchar(i + '0');
+        i++;
     }
 
     printf("Infinite loop avoided! \\o/\n");
