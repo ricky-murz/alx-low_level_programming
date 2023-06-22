@@ -4,7 +4,7 @@
  *
  * Return: 1 if the character is uppercase, 0 otherwise.
  */
-int is_uppercase(char c)
+int is_uppercase(int c)
 {
     if (c >= 'A' && c <= 'Z')
         return 1;
