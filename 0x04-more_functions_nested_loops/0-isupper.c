@@ -1,4 +1,4 @@
-include "main.h"
+#include "main.h"
 
 /**
  * is_uppercase - Checks if a character is uppercase.
@@ -6,7 +6,9 @@ include "main.h"
  *
  * Return: 1 if the character is uppercase, 0 otherwise.
  */
-int is_uppercase(int c)
+
+int _isupper(int c)
+
 {
     if (c >= 'A' && c <= 'Z')
         return 1;
