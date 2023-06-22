@@ -1,3 +1,5 @@
+include "main.h"
+
 /**
  * is_uppercase - Checks if a character is uppercase.
  * @c: The character to be checked.
