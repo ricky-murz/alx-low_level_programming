@@ -14,15 +14,15 @@ int main(void)
 
 	/* Commented out the code causing the infinite loop */
 	/*
-	while (i < 10)
-	{
-		putchar(i);
-		i++;
-	}
-	*/
+	 * while (i < 10)
+	 * {
+	 *     putchar(i);
+	 *     i++;
+	 * }
+	 */
 
 	printf("Infinite loop avoided! \\o/\n");
 
-	return 0;
+	return (0);
 }
 
