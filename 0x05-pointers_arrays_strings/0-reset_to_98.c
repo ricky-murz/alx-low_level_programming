@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -12,5 +11,14 @@ void update_value(int *ptr)
 {
     if (ptr != NULL)
         *ptr = 98;
+}
+
+int main()
+{
+    int number = 0;
+    printf("Before update: %d\n", number);
+    update_value(&number);
+    printf("After update: %d\n", number);
+    return 0;
 }
 
