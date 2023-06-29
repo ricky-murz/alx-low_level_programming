@@ -1,37 +1,23 @@
-#include "main.h"
 #include <stdio.h>
 
-char* _strcat(char* dest, char* src) {
-    char* ptr = dest;
-
-    // Find the end of the destination string
-    while (*ptr != '\0') {
-        ptr++;
+char *_strcat(char *dest, char *src) {
+    char *p = dest;
+    while (*p != '\0') {
+        p++;
     }
-
-    // Copy the source string to the end of the destination string
     while (*src != '\0') {
-        *ptr = *src;
-        ptr++;
+        *p = *src;
+        p++;
         src++;
     }
-
-    // Add the terminating null byte
-    *ptr = '\0';
-
+    *p = '\0';
     return dest;
 }
 
 int main() {
-    char dest[100] = "Hello";
-    char src[] = " World!";
-
-    printf("Before concatenation: %s\n", dest);
-
-    _strcat(dest, src);
-
-    printf("After concatenation: %s\n", dest);
-
+    char str1[100] = "Hello";
+    char str2[] = " world!";
+    _strcat(str1, str2);
+    printf("%s\n", str1);
     return 0;
 }
-
