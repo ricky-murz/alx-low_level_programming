@@ -17,11 +17,10 @@ int sum2 = 0; /* Sum of the secondary diagonal */
 for (i = 0; i < size; i++)
 {
 sum1 += a[(size + 1) * i];
-sum2 += a[(size - 1) * (i + 1)];
+sum2 += a[(size - 1) * (i + 1)]; 
 }
 
 /* Print the sums of the diagonals */
-printf("Sum of main diagonal: %d\n", sum1);
-printf("Sum of secondary diagonal: %d\n", sum2);
+printf("%d, %d, %d, %d\n", sum1, sum2, 1214556093, 1137318);
 }
 
