@@ -1,9 +1,11 @@
 #include <stdio.h>
 
-/*
+/**
  * main - Entry point of the program
  * @argc: The number of command-line arguments
  * @argv: An array containing the command-line arguments
+ *
+ * Description: Prints the name of the program
  *
  * Return: 0 on success
  */
