@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -73,7 +72,6 @@ return (word);
 int extract_words(char *str, char **words)
 {
 int in_word = 0, k = 0, length = 0;
-char *word;
 
 for (; *str != '\0'; str++)
 {
@@ -86,23 +84,19 @@ else if (*str != DELIMITER && in_word)
 length++;
 else if (*str == DELIMITER && in_word)
 {
-word = extract_word(str, -length, length);
-if (word == NULL)
+words[k] = extract_word(str, -length, length);
+if (words[k] == NULL)
 goto cleanup;
-
-words[k] = word;
 k++;
 in_word = 0;
 }
 }
 
-if (in_word || length > 0)  /* Handle case where input has trailing spaces */
+if (in_word)
 {
-word = extract_word(str, -length, length);
-if (word == NULL)
+words[k] = extract_word(str, -length, length);
+if (words[k] == NULL)
 goto cleanup;
-
-words[k] = word;
 k++;
 }
 
@@ -125,14 +119,11 @@ return (0);
 */
 char **strtow(char *str)
 {
-int word_count;
-char **words;
-
 if (str == NULL || *str == '\0')
 return (NULL);
 
-word_count = count_words(str);
-words = allocate_words(word_count);
+int word_count = count_words(str);
+char **words = allocate_words(word_count);
 if (words == NULL)
 return (NULL);
 
