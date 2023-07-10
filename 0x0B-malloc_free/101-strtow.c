@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -95,7 +96,7 @@ in_word = 0;
 }
 }
 
-if (in_word)
+if (in_word || length > 0)  // Handle case where input has trailing spaces
 {
 word = extract_word(str, -length, length);
 if (word == NULL)
@@ -124,8 +125,8 @@ return (0);
 */
 char **strtow(char *str)
 {
-int word_count = 0;
-char **words = NULL;
+int word_count;
+char **words;
 
 if (str == NULL || *str == '\0')
 return (NULL);
