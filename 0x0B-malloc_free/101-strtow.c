@@ -63,7 +63,7 @@ return (word);
 }
 
 /**
-* extract_words - Extract words from string and stores them in the words array.
+* extract_words - Extracts words from a string and stores them in the words array.
 * @str: The string to extract words from.
 * @words: The array to store the extracted words.
 *
@@ -119,10 +119,11 @@ return (0);
 */
 char **strtow(char *str)
 {
+int word_count;
 if (str == NULL || *str == '\0')
 return (NULL);
 
-int word_count = count_words(str);
+word_count = count_words(str);
 char **words = allocate_words(word_count);
 if (words == NULL)
 return (NULL);
