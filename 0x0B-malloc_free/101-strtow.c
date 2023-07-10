@@ -96,7 +96,7 @@ in_word = 0;
 }
 }
 
-if (in_word || length > 0)  // Handle case where input has trailing spaces
+if (in_word || length > 0)  /* Handle case where input has trailing spaces */
 {
 word = extract_word(str, -length, length);
 if (word == NULL)
