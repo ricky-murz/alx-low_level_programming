@@ -4,7 +4,8 @@
 #include <string.h>
 
 /**
-* string_nconcat - Concatenates two strings with a limit on the number of characters from the second string.
+* string_nconcat - Concatenates two strings with limit
+*                  on number of characters from second string.
 * @s1: The first string.
 * @s2: The second string.
 * @n: The maximum number of characters from s2 to concatenate.
