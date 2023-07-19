@@ -2,11 +2,11 @@
 #include <stddef.h>
 
 /**
- * get_op_func - Function that selects the correct function to perform the operation
+ * get_op_func - Function that selects correct function to perform operation
  * asked by the user.
  * @s: The operator passed as an argument to the program.
  *
- * Return: Pointer to the function that corresponds to the operator given as a parameter.
+ * Return: Pointer to function that corresponds to operator given as parameter.
  */
 int (*get_op_func(char *s))(int, int)
 {
