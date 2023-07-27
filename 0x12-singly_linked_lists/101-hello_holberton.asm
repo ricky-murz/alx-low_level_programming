@@ -1,18 +1,15 @@
 section .data
-    hello db 'Hello, Holberton', 0x0A ; Null-terminated string with newline
-    format db "%s", 0               ; Format string for printf
+    format db "Hello, Holberton", 0x0A, 0
 
 section .text
     global main
     extern printf
 
 main:
-    ; Prepare the arguments and call printf
-    mov rdi, format    ; Format string
-    mov rsi, hello     ; Pointer to the string to print
+    mov edi, format     ; Load the address of the format string
+    xor eax, eax        ; Clear RAX to indicate no XMM registers used for varargs
     call printf
 
-    ; Exit the program
-    mov eax, 0         ; Return code 0
+    mov eax, 0          ; Set the return value to 0
     ret
 
