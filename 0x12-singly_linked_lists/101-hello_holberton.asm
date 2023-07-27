@@ -10,7 +10,6 @@ main:
     ; Prepare the arguments and call printf
     mov rdi, format    ; Format string
     mov rsi, hello     ; Pointer to the string to print
-    xor rax, rax       ; Clear RAX to indicate no XMM registers used for varargs
     call printf
 
     ; Exit the program
