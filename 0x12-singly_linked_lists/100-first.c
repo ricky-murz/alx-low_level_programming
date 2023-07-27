@@ -1,10 +1,16 @@
 #include <stdio.h>
 
-/*
- * This function serves as a constructor function,
- * designated with the attribute.
- * It will be automatically executed before the main function starts.
+/**
+ * print_message - This function serves as a constructor
+ * and is executed before main.
+ *
+ * Description: This function prints the message
+ * "You're beat! and yet, you must allow,\nI bore my house upon my back!\n".
  */
-void __attribute__((constructor)) print_message() {
-printf("You're beat! and yet, you must allow,\nI bore my house upon my back!\n");
+void print_message(void) __attribute__((constructor));
+
+void print_message(void)
+{
+printf("You're beat! and yet, you must allow,
+\nI bore my house upon my back!\n");
 }
