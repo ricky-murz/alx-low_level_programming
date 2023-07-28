@@ -32,7 +32,9 @@ new_node->next = NULL;
 if (*head == NULL)
 {
 *head = new_node;
-} else {
+}
+else
+{
 temp = *head;
 while (temp->next != NULL)
 {
