@@ -2,12 +2,11 @@
 
 void first(void) __attribute__((constructor));
 
-/*
- * first - This function serves as a constructor
- * and is executed before main.
+/**
+ * first - This function serves as a constructor and is executed before main.
  *
- * Description: This function prints the message
- * before the main function is executed
+ * Description: This function prints the message before the main function
+ * is executed.
  */
 void first(void)
 {
